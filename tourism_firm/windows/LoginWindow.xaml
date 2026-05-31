@@ -1,0 +1,24 @@
+﻿<Window x:Class="tourism_firm.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tourism_firm"
+        mc:Ignorable="d"
+        Title="Вход в систему" Width="273" Height="299"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Margin="0,0,0,1">
+        <TextBlock Text="Вход в систему" FontSize="20" Margin="64,10,0,0" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left" Width="144"/>
+
+        <TextBlock Text="Логин:" Margin="10,63,0,0" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="47"/>
+        <TextBox x:Name="LoginTextBox" Margin="0,62,10,0" Height="19" VerticalAlignment="Top" HorizontalAlignment="Right" Width="186"/>
+
+        <TextBlock Text="Пароль:" Margin="10,96,0,0" HorizontalAlignment="Left" Width="56" Height="17" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PasswordBox" Margin="0,95,10,0" Height="19" VerticalAlignment="Top" HorizontalAlignment="Right" Width="186"/>
+
+        <Button x:Name="LoginButton" Content="Войти" Click="LoginButton_Click" Margin="0,163,82,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="89"/>
+        <Button x:Name="RegisterButton" Content="Регистрация" Click="RegisterButton_Click" Margin="0,206,82,0" HorizontalAlignment="Right" Width="89" Height="26" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

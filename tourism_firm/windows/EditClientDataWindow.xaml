@@ -1,0 +1,28 @@
+﻿<Window x:Class="tourism_firm.EditClientDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tourism_firm"
+        mc:Ignorable="d"
+        Title="Изменение данных" Height="250" Width="291" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock Text="Фамилия:" VerticalAlignment="Top" Margin="31,15,0,0" Height="22" HorizontalAlignment="Left" Width="76"/>
+        <TextBox x:Name="LastNameTextBox" Tag="LastName" Margin="107,15,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+
+        <TextBlock Text="Email:" VerticalAlignment="Top" Margin="32,103,0,0" Height="22" HorizontalAlignment="Left" Width="75"/>
+        <TextBox x:Name="EmailTextBox" Tag="Email" Margin="107,103,0,0" HorizontalAlignment="Left" Width="143" Height="22" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Имя:" VerticalAlignment="Top" Margin="32,44,0,0" Height="22" HorizontalAlignment="Left" Width="75"/>
+        <TextBox x:Name="FirstNameTextBox" Tag="FirstName" Margin="107,44,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+
+        <TextBlock Text="Отчество:" VerticalAlignment="Top" Margin="31,74,0,0" Height="22" HorizontalAlignment="Left" Width="76"/>
+        <TextBox x:Name="MiddleNameTextBox" Tag="MiddleName" Margin="107,74,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+
+        <TextBlock Text="Телефон:" VerticalAlignment="Top" Margin="32,134,0,0" Height="22" HorizontalAlignment="Left" Width="75"/>
+        <TextBox x:Name="PhoneTextBox" Tag="Phone" Margin="107,134,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="143"/>
+
+        <Button x:Name="SaveButton" Content="Сохранить" HorizontalAlignment="Left" Margin="96,168,0,0" VerticalAlignment="Top" Click="SaveButton_Click" Height="27" Width="88"/>
+
+    </Grid>
+</Window>

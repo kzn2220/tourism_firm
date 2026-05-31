@@ -1,0 +1,32 @@
+﻿<Window x:Class="tourism_firm.windows.EditClientFromEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tourism_firm.windows"
+        mc:Ignorable="d"
+            Title="Изменение данных" Width="273" Height="344"
+    ResizeMode="NoResize">
+
+    <Grid Height="359" VerticalAlignment="Center" HorizontalAlignment="Center" Width="273">
+
+        <TextBlock Text="Фамилия:" Margin="15,96,203,0" Height="18" VerticalAlignment="Top"/>
+        <TextBox x:Name="LastNameTextBox" Margin="82,96,15,0" Height="18" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Имя:" Margin="15,65,222,0" Height="18" VerticalAlignment="Top"/>
+        <TextBox x:Name="FirstNameTextBox" Width="176" Margin="82,65,0,0" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Отчество:" Margin="15,126,202,0" Height="18" VerticalAlignment="Top"/>
+        <TextBox x:Name="MiddleNameTextBox" Width="176" Margin="82,126,0,0" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Телефон:" Margin="15,193,202,0" Height="17" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneTextBox" Width="176" Margin="82,193,0,0" HorizontalAlignment="Left" Height="17" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Email:" Margin="15,160,202,0" Height="18" VerticalAlignment="Top"/>
+        <TextBox x:Name="EmailTextBox" Width="176" Margin="82,160,0,0" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top"/>
+
+        <Button x:Name="SavetButton" Content="Сохранить" Click="SaveClientButton_Click" Margin="0,243,0,0" HorizontalAlignment="Center" Width="150" Height="28" VerticalAlignment="Top"/>
+        <Button x:Name="CancelButton" Content="Отмена" Click="CancelButton_Click" HorizontalAlignment="Center" Width="150" Height="28" VerticalAlignment="Top" Margin="0,287,0,0"/>
+
+    </Grid>
+</Window>

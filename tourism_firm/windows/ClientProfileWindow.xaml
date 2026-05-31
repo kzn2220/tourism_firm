@@ -1,0 +1,55 @@
+﻿<Window x:Class="tourism_firm.ClientProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tourism_firm"
+        mc:Ignorable="d"
+        Title="Профиль" Width="1000" Height="650"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Height="634" VerticalAlignment="Center" HorizontalAlignment="Left" Width="1000">
+        <Button x:Name="BackButton" Content="Назад" Click="BackButton_Click" Margin="881,20,30,586"/>
+        <Button x:Name="BackToAutorizationButton" Content="Выйти из аккаунта" HorizontalAlignment="Left" Margin="568,111,0,0" VerticalAlignment="Top" Click="BackToAutorization_Button" Width="114" Height="31" BorderBrush="#FF707070" Background="#FFFFC3C3"/>
+        <Button x:Name="EditDataButton" Content="Изменить данные" HorizontalAlignment="Left" Margin="568,55,0,0" VerticalAlignment="Top" Click="EditDataButton_Click" Width="114" Height="31"/>
+
+        <TextBlock Text="Личные данные" FontSize="16" FontWeight="Bold" Margin="20,22,822,584"/>
+
+        <TextBlock Text="Фамилия:" VerticalAlignment="Top" Margin="20,55,901,0" Height="22"/>
+        <TextBox x:Name="LastNameTextBox" Tag="LastName" Margin="98,55,749,557" IsReadOnly="True"/>
+
+        <TextBlock Text="Email:" VerticalAlignment="Top" Margin="298,88,640,0" Height="22"/>
+        <TextBox x:Name="EmailTextBox" Tag="Email" Margin="365,88,482,524" IsReadOnly="True"/>
+
+        <TextBlock Text="Имя:" VerticalAlignment="Top" Margin="21,88,901,0" Height="22"/>
+        <TextBox x:Name="FirstNameTextBox" Tag="FirstName" Margin="98,88,749,524" IsReadOnly="True"/>
+
+        <TextBlock Text="Логин:" VerticalAlignment="Top" Margin="298,55,640,0" Height="22"/>
+        <TextBox x:Name="LoginTextBox" Tag="Login" IsReadOnly="True" Margin="365,55,482,557"/>
+
+        <TextBlock Text="Отчество:" VerticalAlignment="Top" Margin="20,119,902,0" Height="22"/>
+        <TextBox x:Name="MiddleNameTextBox" Tag="MiddleName" Margin="98,119,749,493" IsReadOnly="True"/>
+
+        <TextBlock Text="Телефон:" VerticalAlignment="Top" Margin="298,119,640,0" Height="22"/>
+        <TextBox x:Name="PhoneTextBox" Tag="Phone" Margin="365,119,482,493" IsReadOnly="True"/>
+
+
+        <TextBlock FontSize="16" FontWeight="Bold" Margin="20,157,830,449" Text="История покупок"/>
+
+        <DataGrid x:Name="OrdersDataGrid" AutoGenerateColumns="False"
+                          IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" Margin="0,190,0,0"  Width="Auto" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding OrderId}" Width="100"/>
+                <DataGridTextColumn Header="Название тура" Binding="{Binding TourName}" Width="300"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Country}" Width="110"/>
+                <DataGridTextColumn Header="Город" Binding="{Binding City}" Width="110"/>
+                <DataGridTextColumn Header="Отель" Binding="{Binding Hotel}" Width="110"/>
+                <DataGridTextColumn Header="Дата покупки" Binding="{Binding OrderDate, StringFormat='dd.MM.yyyy'}" Width="100"/>
+                <DataGridTextColumn Header="Дата вылета" Binding="{Binding TourStartDate, StringFormat='dd.MM.yyyy'}" Width="100"/>
+                <DataGridTextColumn Header="Дата возврата" Binding="{Binding TourEndDate, StringFormat='dd.MM.yyyy'}" Width="100"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalCost, StringFormat='N2'}" Width="100"/>
+                <DataGridTextColumn Header="Количество мест" Binding="{Binding SeatsAmount}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
